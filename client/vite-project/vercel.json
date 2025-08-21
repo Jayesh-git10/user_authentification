@@ -1,8 +1,14 @@
 {
   "builds": [
-    { "src": "package.json", "use": "@vercel/static-build" }
+    {
+      "src": "vite-project/index.html",
+      "use": "@vercel/static-build"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*)",
+      "dest": "vite-project/index.html"
+    }
   ]
 }

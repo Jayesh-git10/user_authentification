@@ -19,6 +19,4 @@ app.use('/api/auth',authRouter);
 app.use('/api/user',userRouter);
 console.log(`Server started on PORT : ${port}`);
 
-export default function handler(req, res) {
-  app(req, res);
-}
+export default app

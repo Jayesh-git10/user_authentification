@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import 'dotenv/config';
 import cookieParser from "cookie-parser";
-import connectDB from "./conifg/mongodb.js"; // check spelling: should be "config"
+import connectDB from "./config/mongodb.js"; // check spelling: should be "config"
 import authRouter from './routes/authRoutes.js'; 
 import userRouter from "./routes/userRouter.js";
 

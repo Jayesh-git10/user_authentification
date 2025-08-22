@@ -17,4 +17,8 @@ app.use(cors({origin: allowedOrigins ,credentials:true}));
 app.get('/',(req,res)=>res.send("API Connected"));
 app.use('/api/auth',authRouter);
 app.use('/api/user',userRouter);
-app.listen(port, ()=>console.log(`Server started on PORT : ${port}`));
+console.log(`Server started on PORT : ${port}`);
+
+export default function handler(req, res) {
+  app(req, res);
+}

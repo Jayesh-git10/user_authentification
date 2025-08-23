@@ -11,9 +11,13 @@ const port = process.env.PORT || 3000;
 
 connectDB();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://user-authentification-frontend.vercel.app"
+];
+
 const corsOptions = {
   origin: function (origin, callback) {
-    const allowedOrigins = [process.env.FRONTEND_URL];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {

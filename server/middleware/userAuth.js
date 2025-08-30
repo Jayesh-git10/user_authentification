@@ -2,7 +2,8 @@ import jwt from "jsonwebtoken";
 
 const userAuth = async (req, res, next) => {
   const { token } = req.cookies;
-
+  console.log("Cookies:", req.cookies);
+  if (!token) {
     return res.status(401).json({ success: false, message: "Authentication required" });
   }
 
@@ -20,6 +21,6 @@ const userAuth = async (req, res, next) => {
   } catch (error) {
     return res.status(401).json({ success: false, message: "Invalid or expired token" });
   }
-;
+};
 
 export default userAuth;
